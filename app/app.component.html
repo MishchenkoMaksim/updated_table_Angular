@@ -1,0 +1,40 @@
+
+<main>
+<table class="table table-striped table-dark col-md-6">
+    <caption>Table with Angular</caption>
+    <thead>
+        <th>Number</th>
+        <th>Product</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+        <tr *ngFor='let product of Products; let i = index' [ngClass]="{'red' : product.price > 500}">
+            <td *ngIf="boolId">{{product.id}}</td>
+            <td *ngIf="boolName">{{product.name}}</td>
+            <td *ngIf="boolPrice">{{product.price}}</td>
+            <button type="button" style="margin-top: 5px;" class="btn btn-secondary" (click)="deleteElement(i, product.id)">Delete</button>
+        </tr>
+    </tbody>
+</table>
+
+<div id="forAdding">
+    <input type="text" [(ngModel)]='id'>
+    <input type="text" [(ngModel)]='name'>
+    <input type="text" [(ngModel)]='price'>
+    <p>Id: {{id}}, Name: {{name}}, Price: {{price}}</p>
+    <button type="button" (click)="addNewElem()">Add New Element</button>
+</div>
+
+<ul class="list-group">
+        <li class="list-group-item">Category
+            <ul>
+                <li class="list-group-item" (click)='forId()'>Id</li>
+                <li class="list-group-item" (click)='forName()'>Name</li>
+                <li class="list-group-item" (click)='forPrice()'>Price</li>
+                <li class="list-group-item" (click)='showAll()'>Show All</li>
+            </ul>
+        </li>
+    </ul>
+</main>
+
+    

@@ -1,0 +1,42 @@
+main{
+    margin: 10px 0 50px 50px;
+}
+
+ul{
+    list-style: none;
+    position: absolute;
+    top:10px;
+    right: 40%;
+}
+
+#forAdding{
+    position: absolute;
+    top:448px;
+    right: 10%;
+}
+
+li{
+    cursor: pointer;
+    width: 150px;
+    position: relative;
+    text-align: center;
+}
+
+ul li{
+    left: 60px;
+    color: black;
+}
+
+ul li ul{
+    margin-top: 38px;
+    display: none;
+}
+
+ul li:hover{
+    background-color: darkgray;
+    color: white;
+}
+
+ul li:hover > ul{
+    display: inherit;
+}
